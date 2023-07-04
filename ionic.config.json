@@ -1,0 +1,7 @@
+{
+  "name": "Mathissimo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
