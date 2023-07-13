@@ -10,11 +10,7 @@ import JoinSmartlist from '../views/JoinSmartlist.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    redirect: '/login'
-  },
-  {
-    path: '/login/',
+    path: '/login',
     component: Login,
   },
   {
@@ -22,26 +18,23 @@ const routes: Array<RouteRecordRaw> = [
     component: Signup
   },
   {
-    path: '/home',
+    path: '',
+    redirect: '/smartlist',
     component: Home,
     children: [
       {
-        path: '/home',
-        redirect: '/smartlist'
+        path: 'smartlist',
+        component: Smartlist
       },
       {
-        path: '/smartlist',
-        component: Smartlist
+        path: '/smartlist/:id',
+        component: MyList
       }
     ]
   },
   {
     path: '/profile',
     component: Profile,
-  },
-  {
-    path: "/smartlist/:id",
-    component: MyList
   },
   {
     path: '/smartlist/join/:code',
