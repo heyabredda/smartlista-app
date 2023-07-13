@@ -1,34 +1,53 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import Login from '../views/Login.vue';
+import Signup from '../views/Signup.vue';
+import Home from '../views/Home.vue';
+import MyList from '../views/MyList.vue';
+import Smartlist from '../views/Smartlist.vue';
+import Profile from '../views/Profile.vue';
+import JoinSmartlist from '../views/JoinSmartlist.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/login'
   },
   {
-    path: '/tabs/',
-    component: TabsPage,
+    path: '/login/',
+    component: Login,
+  },
+  {
+    path: '/signup',
+    component: Signup
+  },
+  {
+    path: '/home',
+    component: Home,
     children: [
       {
-        path: '',
-        redirect: '/tabs/tab1'
+        path: '/home',
+        redirect: '/smarlist'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
-      },
-      {
-        path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
-      },
-      {
-        path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        path: '/smarlist',
+        component: Smartlist
       }
     ]
+  },
+  {
+    path: '/profile',
+    component: Profile,
+  },
+  {
+    path: "/smarlist/:id",
+    component: MyList
+  },
+  {
+    path: '/smartlist/join/:code',
+    component: JoinSmartlist
   }
+  
 ]
 
 const router = createRouter({

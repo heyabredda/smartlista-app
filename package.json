@@ -1,5 +1,5 @@
 {
-  "name": "mathissimo",
+  "name": "smartlista",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -12,13 +12,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@capacitor/android": "5.1.0",
     "@capacitor/app": "5.0.5",
     "@capacitor/core": "5.1.0",
     "@capacitor/haptics": "5.0.5",
+    "@capacitor/ios": "5.1.0",
     "@capacitor/keyboard": "5.0.5",
     "@capacitor/status-bar": "5.0.5",
+    "@ionic/storage": "^4.0.0",
     "@ionic/vue": "^7.0.0",
     "@ionic/vue-router": "^7.0.0",
+    "axios": "^1.4.0",
     "ionicons": "^7.0.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

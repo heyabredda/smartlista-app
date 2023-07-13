@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+import axios from 'axios';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -23,6 +24,11 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { Storage } from '@ionic/storage';
+
+const store = new Storage();
+await store.create();
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
@@ -30,3 +36,15 @@ const app = createApp(App)
 router.isReady().then(() => {
   app.mount('#app');
 });
+
+axios.defaults.baseURL = 'https://smartlista-api.test';
+axios.defaults.withCredentials = true;
+
+const token = await store.get('authorization_token');
+console.log({token});
+axios.defaults.headers.common = {
+  'Access-Control-Allow-Origin': '*',
+  'X-Requested-With': 'XMLHttpRequest',
+  'Accept': 'application/json',
+  'Authorization': `Bearer ${token}`
+};
