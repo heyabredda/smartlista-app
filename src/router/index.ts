@@ -27,10 +27,10 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/home',
-        redirect: '/smarlist'
+        redirect: '/smartlist'
       },
       {
-        path: '/smarlist',
+        path: '/smartlist',
         component: Smartlist
       }
     ]
@@ -40,7 +40,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Profile,
   },
   {
-    path: "/smarlist/:id",
+    path: "/smartlist/:id",
     component: MyList
   },
   {

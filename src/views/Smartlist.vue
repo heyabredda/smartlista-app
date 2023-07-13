@@ -10,7 +10,7 @@
                 <span class="outer-card-title"> Most recent </span>
                 
                 <div v-for="card in smartlist" :key="card.id">
-                    <ion-card class="latest" button="true" :router-link="'/smarlist/' + card.id">
+                    <ion-card class="latest" button="true" :router-link="'/smartlist/' + card.id">
                         <ion-card-header>
                             <ion-card-title> {{ card.name }}</ion-card-title>
                             <!-- <ion-card-subtitle>Last updated: 2 minutes ago</ion-card-subtitle> -->
@@ -119,7 +119,7 @@ export default {
             }).then(response => {
                 this.getSmartlist();
                 // Redirect to smartlist page after creation
-                this.router.push("/smarlist/" + response.data.id);
+                this.router.push("/smartlist/" + response.data.id);
             });
         }
     }

@@ -83,7 +83,7 @@ export default defineComponent({
       }).then(response => {
         console.log({ response });
         this.token = response.data;
-        this.router.push("/smarlist");
+        this.router.push("/smartlist");
         // Set authorization token
         this.setToken();
       }).catch(err => {

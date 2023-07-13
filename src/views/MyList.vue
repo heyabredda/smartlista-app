@@ -7,7 +7,7 @@
             <ion-header>
                 <ion-toolbar>
                     <ion-buttons slot="start">
-                        <ion-back-button default-href="/smarlist"></ion-back-button>
+                        <ion-back-button default-href="/smartlist"></ion-back-button>
                     </ion-buttons>
 
                     <ion-title v-if="smartlist"> {{ smartlist.name }}</ion-title>

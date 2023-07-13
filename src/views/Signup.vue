@@ -102,7 +102,7 @@ export default defineComponent({
         console.log(response.data);
         if (response.status == 200) {
           // Go to next page
-          this.router.push("/smarlist");
+          this.router.push("/smartlist");
         }
       });
     }
