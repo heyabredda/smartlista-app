@@ -1,2 +1,1 @@
 # smartlista-app
-# smartlista-test
