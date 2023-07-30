@@ -98,13 +98,8 @@ export default {
             smartlist: []
         };
     },
-    async beforeMount() {
-        const store = new Storage();
-        await store.create();
-        const token = await store.get('authorization_token');
-        if(token) {
-            this.getSmartlist();
-        }
+    beforeMount() {
+        this.getSmartlist();
     },
     methods: {
         getSmartlist() {

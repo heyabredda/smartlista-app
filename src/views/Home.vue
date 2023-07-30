@@ -3,7 +3,7 @@
       <ion-tabs>
         <ion-router-outlet></ion-router-outlet>
         <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="list" href="/card-list">
+          <ion-tab-button tab="list" href="/smartlist">
             <ion-icon :icon="listOutline"></ion-icon>
             <ion-label>My list</ion-label>
           </ion-tab-button>
